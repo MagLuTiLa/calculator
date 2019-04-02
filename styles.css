@@ -1,0 +1,25 @@
+h1 {
+    color: red;
+}
+
+
+.calculator {
+    max-width: 10em;
+}
+
+.display {
+    text-align: right;
+}
+
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 1px;
+}
+
+
+.result_button {
+    grid-column: 4;
+    grid-row: 3 / span 3;
+}
