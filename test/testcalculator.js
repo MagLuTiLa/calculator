@@ -1,6 +1,6 @@
 var assert = require('assert');
 
-var calculator = require('./script.js');
+var calculator = require('../script.js');
 
 
 describe('Calculator unit tests', function() {
