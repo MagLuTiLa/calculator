@@ -1,8 +1,3 @@
-let document = (typeof document === "undefined") ? {} : document;
-
-const calculations = require('./calculations.js');
-
-
 const calculator = document.querySelector('.calculator');
 
 const dataset = calculator.dataset;
@@ -30,7 +25,7 @@ buttons.addEventListener('click', e => {
                     break;
 
                 case 'result':
-                    var result = calculations.calculate(dataset.operator, dataset.storedNumber, curNumber)
+                    var result = calculate(dataset.operator, dataset.storedNumber, curNumber)
                     display.textContent = result;
                     dataset.storedNumber = 0;
                     break;
@@ -53,7 +48,7 @@ buttons.addEventListener('click', e => {
 
         // Number key
         else {
-            display.textContent = calculations.addDigit(curNumber, value);
+            display.textContent = addDigit(curNumber, value);
 
             dataset.prevButton = 'number';
         }
