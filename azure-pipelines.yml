@@ -15,3 +15,6 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
+
+- script: npx mocha
+- script: mocha test --reporter mocha-junit-reporter
