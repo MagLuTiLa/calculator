@@ -1,3 +1,8 @@
+let document = (typeof document === "undefined") ? {} : document;
+
+const calculations = require('./calculations.js');
+
+
 const calculator = document.querySelector('.calculator');
 
 const dataset = calculator.dataset;
@@ -8,35 +13,6 @@ dataset.prevButton
 const buttons = document.querySelector('.buttons');
 const display = document.querySelector('.display');
 
-function calculate(operator, number1, number2) {
-    var result = 0;
-    switch (operator) {
-        case 'add':
-            result = Number(number1) + Number(number2);
-            break;
-        case 'subtract':
-            result = Number(number1) - Number(number2);
-            break;
-        case 'multiply':
-            result = Number(number1) * Number(number2);
-            break;
-        case 'divide':
-            result = Number(number1) / Number(number2);
-            break;
-        default:
-            result = number2;
-            break;
-    }
-    return result;
-}
-
-function addDigit(curNumber, value) {
-    var newNumber = value;
-    if (curNumber != 0)
-        newNumber = curNumber + value; 
-
-    return newNumber;
-}
 
 buttons.addEventListener('click', e => {
     var key = e.target;
@@ -54,7 +30,7 @@ buttons.addEventListener('click', e => {
                     break;
 
                 case 'result':
-                    var result = calculate(dataset.operator, dataset.storedNumber, curNumber)
+                    var result = calculations.calculate(dataset.operator, dataset.storedNumber, curNumber)
                     display.textContent = result;
                     dataset.storedNumber = 0;
                     break;
@@ -77,7 +53,7 @@ buttons.addEventListener('click', e => {
 
         // Number key
         else {
-            display.textContent = addDigit(curNumber, value);
+            display.textContent = calculations.addDigit(curNumber, value);
 
             dataset.prevButton = 'number';
         }
