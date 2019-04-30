@@ -20,12 +20,12 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '$(build.sourcesDirectory)/mocha'
+    workingDir: '**/packages/mocha'
 
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: '$(build.sourcesDirectory)/mocha-junit-reporter'
+    workingDir: '**/packages/mocha-junit-reporter'
 
 - script: npx mocha test --reporter mocha-junit-reporter
 
