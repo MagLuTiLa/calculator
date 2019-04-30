@@ -17,4 +17,3 @@ steps:
 - task: PublishBuildArtifacts@1
 
 - script: npx mocha
-- script: mocha test --reporter mocha-junit-reporter
