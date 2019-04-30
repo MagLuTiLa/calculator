@@ -14,14 +14,23 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
+
 - task: PublishBuildArtifacts@1
+
 - task: Npm@1
   inputs:
     command: 'install'
     workingDir: '$(build.sourcesDirectory)/mocha'
+
 - task: Npm@1
   inputs:
     command: 'install'
     workingDir: '$(build.sourcesDirectory)/mocha-junit-reporter'
 
 - script: npx mocha test --reporter mocha-junit-reporter
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/test-results.xml'
