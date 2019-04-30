@@ -17,5 +17,5 @@ steps:
 - task: PublishBuildArtifacts@1
 
 - script: npx mocha
-- script: npm install mocha-junit-reporter --save-dev
+- script: npm install -g mocha-junit-reporter
 - script: npx mocha test --reporter mocha-junit-reporter
