@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "copen": "cypress open"
+    },
+    "dependencies": {
+        "cypress": "^3.2.0"
+    },
+    "devDependencies": {
+        "cypress-cucumber-preprocessor": "^1.11.0"
+    },
+    "cypress-cucumber-preprocessor": {
+        "nonGlobalStepDefinitions": true
+    }
+}
