@@ -15,8 +15,7 @@ steps:
   inputs:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
-
-- task: PublishBuildArtifacts@1
+    archiveFile: '$(Build.ArtifactStagingDirectory)/build_$(Build.BuildId).zip'
 
 - script: npm install
 
@@ -40,5 +39,3 @@ steps:
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'cypressTests'
-    publishLocation: 'Container'
