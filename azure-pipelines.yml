@@ -18,7 +18,25 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- script: npm install 
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(build.sourcesDirectory)/packages/cypress'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(build.sourcesDirectory)/packages/cypress-cucumber-preprocessor'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(build.sourcesDirectory)/packages/mocha'
+
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: '$(build.sourcesDirectory)/packages/mocha-junit-reporter'
 
 - script: npx mocha test --reporter mocha-junit-reporter
 
