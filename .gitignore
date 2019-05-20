@@ -3,3 +3,5 @@ test-results.xml
 
 cypress/screenshots
 cypress/videos
+
+node_modules
