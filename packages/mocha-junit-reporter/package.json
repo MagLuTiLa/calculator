@@ -16,8 +16,8 @@
     "fetchSpec": "latest"
   },
   "_requiredBy": [
-    "#DEV:/",
-    "#USER"
+    "#USER",
+    "/"
   ],
   "_resolved": "https://registry.npmjs.org/mocha-junit-reporter/-/mocha-junit-reporter-1.22.0.tgz",
   "_shasum": "4eee2f3318398bf424a64b7594ca7a39d924479c",

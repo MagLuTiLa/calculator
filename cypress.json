@@ -1,6 +1,6 @@
 {
     "defaultCommandTimeout": 10000,
-    "baseUrl": "http://localhost:80",
+    "baseUrl": "https://calculatortesting.azurewebsites.net/",
     "reporter": "junit",
     "reporterOptions": {
         "mochaFile": "cypress/test-results.xml"
@@ -8,7 +8,7 @@
     "video": true,
     "videoUploadOnPasses": false,
     "env": {
-        "host": "http://localhost:80/",
+        "host": "https://calculatortesting.azurewebsites.net/",
         "auth_user": "Maguell",
         "auth_pass": "GunDelSol"
     },
