@@ -1,5 +1,4 @@
 {
-    "defaultCommandTimeout": 10000,
     "baseUrl": "https://calculatortesting.azurewebsites.net/",
     "reporter": "junit",
     "reporterOptions": {
