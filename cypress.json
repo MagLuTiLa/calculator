@@ -1,14 +1,21 @@
 {
     "defaultCommandTimeout": 10000,
     "baseUrl": "http://localhost:80",
+    "reporter": "junit",
+    "reporterOptions": {
+        "mochaFile": "cypress/test-output.xml"
+    },
+    "video": false,
     "env": {
         "host": "http://localhost:80/",
         "auth_user": "Maguell",
         "auth_pass": "GunDelSol"
     },
     "ignoreTestFiles": "*.js",
-    "integrationFolder": "cypressTests/integration",
-    "pluginsFile": "cypressTests/plugins/index.js",
-    "supportFile": "cypressTests/support/index.js",
-    "fixturesFolder": "cypressTests/fixtures"
+    "integrationFolder": "cypress/integration",
+    "pluginsFile": "cypress/plugins/index.js",
+    "supportFile": "cypress/support/index.js",
+    "fixturesFolder": "cypress/fixtures",
+    "videosFolder": "cypress/videos",
+    "screenshotsFolder": "cypress/screenshots"
 }

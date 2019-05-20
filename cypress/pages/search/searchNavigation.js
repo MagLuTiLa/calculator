@@ -62,24 +62,7 @@ class Home {
 
   static compareSelectedNoteContent(noteContent) {
     cy.contains('div', noteContent)
-  }
-
-
-
-     
-
-     
-
-
-
-  static abc(query) {
-    cy.get(SEARCH_FIELD) // 2 seconds
-      .type(query);
-  }
-  static def() {
-    cy.get(SEARCH_BUTTON).contains(SEARCH_TEXT)
-      .click();
-    return new GoogleResultsPage();
+	  expect(true).to.equal(false)
   }
 }
 
