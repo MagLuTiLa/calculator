@@ -33,7 +33,7 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)/cypress'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/test_$(Build.BuildId).zip'
     replaceExistingArchive: true
     verbose: true
 
