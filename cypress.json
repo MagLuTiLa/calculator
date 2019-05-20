@@ -3,7 +3,7 @@
     "baseUrl": "http://localhost:80",
     "reporter": "junit",
     "reporterOptions": {
-        "mochaFile": "cypress/test-output.xml"
+        "mochaFile": "cypress/test-results.xml"
     },
     "video": true,
     "env": {
