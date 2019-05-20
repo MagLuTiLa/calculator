@@ -18,10 +18,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- task: Npm@1
-  inputs:
-    command: 'install'
-    workingDir: '$(build.sourcesDirectory)/packages/mocha-junit-reporter'
+- script: npm install --only=dev
 
 - script: npx mocha test --reporter mocha-junit-reporter
 
