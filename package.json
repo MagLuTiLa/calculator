@@ -3,7 +3,9 @@
         "copen": "cypress open"
     },
     "dependencies": {
-        "cypress": "^3.2.0"
+        "cypress": "^3.2.0",
+        "mocha": "^6.1.4",
+        "mocha-junit-reporter": "^1.22.0"
     },
     "devDependencies": {
         "cypress-cucumber-preprocessor": "^1.11.0"
