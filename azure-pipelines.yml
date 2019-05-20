@@ -27,3 +27,11 @@ steps:
   inputs:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
+
+- script: npx cypress run
+
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/cypress/test-results.xml'
