@@ -6,6 +6,7 @@
         "mochaFile": "cypress/test-results.xml"
     },
     "video": true,
+    "videoUploadOnPasses": false,
     "env": {
         "host": "http://localhost:80/",
         "auth_user": "Maguell",

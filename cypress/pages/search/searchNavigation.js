@@ -62,7 +62,6 @@ class Home {
 
   static compareSelectedNoteContent(noteContent) {
     cy.contains('div', noteContent)
-	  expect(true).to.equal(false)
   }
 }
 
