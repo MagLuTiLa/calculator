@@ -18,7 +18,7 @@ steps:
 
 - task: PublishBuildArtifacts@1
 
-- script: npm install --only=dev
+- script: npm install 
 
 - script: npx mocha test --reporter mocha-junit-reporter
 
