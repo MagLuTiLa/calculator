@@ -5,7 +5,7 @@
     "reporterOptions": {
         "mochaFile": "cypress/test-output.xml"
     },
-    "video": false,
+    "video": true,
     "env": {
         "host": "http://localhost:80/",
         "auth_user": "Maguell",
