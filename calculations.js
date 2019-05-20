@@ -27,8 +27,3 @@ function addDigit(curNumber, value) {
 
     return newNumber;
 }
-
-module.exports = {
-  calculate: calculate,
-  addDigit: addDigit
-};
