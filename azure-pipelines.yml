@@ -28,10 +28,17 @@ steps:
     testRunner: JUnit
     testResultsFiles: '**/test-results.xml'
 
-- script: npx cypress run
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
+- task: ArchiveFiles@2
   inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/cypress/test-results.xml'
+    rootFolderOrFile: '$(build.sourcesDirectory)/cypress'
+    includeRootFolder: false
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'cypressTests'
+    publishLocation: 'Container'
